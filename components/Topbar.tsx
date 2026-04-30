@@ -1,0 +1,44 @@
+import Image from 'next/image'
+import { Menu } from 'lucide-react'
+
+export default function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
+  return (
+    <header className="h-16 bg-white border-b border-gray-100 flex items-center justify-between px-4 md:px-6 shrink-0 z-30 sticky top-0">
+      <div className="flex items-center gap-2 md:gap-4">
+        {/* Mobile menu toggle */}
+        <button 
+          onClick={onMenuClick}
+          className="p-2 -ml-2 text-gray-600 lg:hidden hover:bg-gray-100 rounded-lg"
+        >
+          <Menu size={20} />
+        </button>
+        
+        {/* Logo */}
+        <div className="flex items-center">
+          <Image
+            src="/logo.png.png"
+            alt="BloodlineX"
+            width={120}
+            height={33}
+            className="object-contain md:w-[160px] md:h-[44px]"
+            priority
+          />
+        </div>
+      </div>
+
+      {/* User */}
+      <div className="flex items-center gap-3">
+        <div className="w-9 h-9 rounded-full overflow-hidden bg-gray-200">
+          <Image
+            src="https://randomuser.me/api/portraits/men/32.jpg"
+            alt="Rumi Aktar"
+            width={36}
+            height={36}
+            className="object-cover"
+          />
+        </div>
+        <span className="text-sm font-semibold text-gray-800">Rumi Aktar</span>
+      </div>
+    </header>
+  )
+}
