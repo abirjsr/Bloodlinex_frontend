@@ -45,6 +45,7 @@ export default function VerificationPage() {
                   key={index}
                   ref={(el) => {
                     inputRefs.current[index] = el;
+                    return undefined;
                   }}
                   type="text"
                   maxLength={1}
