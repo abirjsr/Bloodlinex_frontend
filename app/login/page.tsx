@@ -52,7 +52,6 @@ export default function LoginPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="block w-full pl-11 pr-4 py-3.5 bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-[#F5A623] focus:border-[#F5A623] transition-colors outline-none"
                   placeholder="admin@bloodlinex.com"
-                  required
                 />
               </div>
             </div>
@@ -67,7 +66,7 @@ export default function LoginPage() {
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                  <Lock className="h-5 w-5 text-gray-400" />
+                  <Mail className="h-5 w-5 text-gray-400" />
                 </div>
                 <input
                   type={showPassword ? 'text' : 'password'}
@@ -75,7 +74,6 @@ export default function LoginPage() {
                   onChange={(e) => setPassword(e.target.value)}
                   className="block w-full pl-11 pr-12 py-3.5 bg-gray-50 border border-gray-200 text-gray-900 text-sm rounded-xl focus:ring-[#F5A623] focus:border-[#F5A623] transition-colors outline-none"
                   placeholder="••••••••"
-                  required
                 />
                 <button
                   type="button"
