@@ -22,7 +22,7 @@ export default function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
         </button>
         
         {/* Logo */}
-        <div className="flex items-center bg-white p-1.5 rounded-full border-2 border-black shadow-[0_0_10px_rgba(0,0,0,0.1)]">
+        <div className="flex items-center bg-[#F5A623] p-1.5 rounded-full border-2 border-black shadow-[0_0_10px_rgba(0,0,0,0.1)]">
           <Image
             src="/logo.png.png"
             alt="BloodlineX"
